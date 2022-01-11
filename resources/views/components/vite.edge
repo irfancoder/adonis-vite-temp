@@ -1,0 +1,6 @@
+@if(env('NODE_ENV') === 'development')
+<script type="module" src="http://localhost:3000/@vite/client"></script>
+<script type="module" src="http://localhost:3000/resources/scripts/main.ts"></script>
+@else
+<script type="module" src="http://localhost:3000/public/build/assets/main.4707d92c.js"></script>
+@endif

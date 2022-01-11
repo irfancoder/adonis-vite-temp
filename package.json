@@ -1,0 +1,46 @@
+{
+  "name": "crypto-bot",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:adonis": "node ace build --production",
+    "build:vite": "tsc && vite build",
+    "build": "node ace app:build",
+    "dev:adonis": "node ace serve --watch",
+    "dev:vite": "vite",
+    "dev": "node ace app:dev",
+    "vite": "vite",
+    "vite build": "vite build",
+    "start": "node server.js",
+    "lint": "eslint . --ext=.ts",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@adonisjs/assembler": "^5.3.0",
+    "@vitejs/plugin-vue": "^2.0.1",
+    "adonis-preset-ts": "^2.1.0",
+    "edge-parser": "^8.0.11",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-adonis": "^2.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "execa": "5.0.1",
+    "pino-pretty": "^7.3.0",
+    "prettier": "^2.5.1",
+    "typescript": "~4.5",
+    "vite": "^2.7.10",
+    "youch": "^3.0.0",
+    "youch-terminal": "^2.0.0"
+  },
+  "dependencies": {
+    "@adonisjs/core": "^5.4.0",
+    "@adonisjs/repl": "^3.1.0",
+    "@adonisjs/session": "^6.1.0",
+    "@adonisjs/shield": "^7.0.0",
+    "@adonisjs/view": "^6.1.0",
+    "proxy-addr": "^2.0.7",
+    "reflect-metadata": "^0.1.13",
+    "source-map-support": "^0.5.21",
+    "vue": "^3.2.26"
+  }
+}
