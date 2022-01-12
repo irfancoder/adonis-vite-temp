@@ -1,12 +1,31 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import tailwindcss from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
+// import loader from 'postcss-loader'
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    {
+      name: 'edge',
+      handleHotUpdate({ file, server }) {
+        if (file.endsWith('.edge')) {
+          server.ws.send({
+            type: 'full-reload',
+            path: '*',
+          })
+        }
+      },
+    },
+  ],
   resolve: {
     alias: {
       '~': 'resources',
     },
+  },
+  css: {
+    postcss: [tailwindcss, autoprefixer],
   },
 
   build: {

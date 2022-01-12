@@ -1,5 +1,7 @@
 <template>
-  <p>Hello World</p>
+  <p class="text-blue-500 text-2xl">
+    Congratulations, you have just created your first AdonisJS app.
+  </p>
 </template>
 
 <script setup lang="ts">
